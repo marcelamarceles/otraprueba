@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+
+    <title>los tombos son unos hps ois</title>
+</head>
+<body>
+    <a-scene>
+        <a-ssets>
+            <a-asset-item id="magi" src="assets\magicarp.glb"></a-asset-item>
+            <a-asset-item id="fuegi" src="assets\charmandito.glb"></a-asset-item> 
+        </a-ssets>
+    <a-entity environment="preset: dream; groundColor: #445; grid: cross"></a-entity>
+    <a-entity gltf-model="#magi" position="0.01001 0.42479 0"></a-entity>
+    <a-entity gltf-model="#fuegi" position="-1.5 0.2 0" 
+    animation="property:position;
+    to:-1.5 3 0;
+    dur:2000;
+    loop:true;
+    dir:alternate;
+    easing :easeInCirc"
+    ></a-entity>
+    <a-entity geometry="primitive: plane" material="shader: gif; src: url(assets\tenor.gif); alphaTest: 0.5; side: double" gif="" position="1.488 0.728 0"></a-entity>
+
+</a-scene>
+</body>
+</html>
+
+<!-- https://github.com/supermedium/aframe-environment-component -->
